@@ -12,6 +12,7 @@ New version edition:
 - removed some extra packages
 - improved autocompletion system
 - easy install new langueage
+- replace some packages
 
 ### fixes
 
