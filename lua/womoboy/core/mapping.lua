@@ -1,9 +1,9 @@
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
 -- explorer
-keymap.set('n', '<leader>pv', vim.cmd.Ex)
+keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -13,11 +13,11 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
 -- nerd
-keymap.set('n', '<leader>e', ':Lex<cr>:vertical resize 30<cr>')
+keymap.set("n", "<leader>e", ":Lex<cr>:vertical resize 30<cr>")
 
 -- increse and decrease
-keymap.set('n', '<leader>9', '<C-x>')
-keymap.set('n', '<leader>0', '<C-a>')
+keymap.set("n", "<leader>9", "<C-x>")
+keymap.set("n", "<leader>0", "<C-a>")
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
@@ -41,10 +41,12 @@ keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
 keymap.set("n", "<leader>to", ":FloatermToggle<CR>")
 
 -- maximizer
-keymap.set('n', "<leader>sm", ":MaximizerToggle<cr>")
+keymap.set("n", "<leader>sm", ":MaximizerToggle<cr>")
 
 -- general
-keymap.set('n', '<leader>nh', ':nohl<cr>')
-keymap.set('n', 'x', '"_x')
+keymap.set("n", "<leader>nh", ":nohl<cr>")
+keymap.set("n", "x", '"_x')
 keymap.set("n", "<C-a>", "G<S-v>gg")
 
+-- terminal
+keymap.set("n", "<leader>to", ":FloatermToggle<cr>")

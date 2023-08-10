@@ -56,6 +56,12 @@ local plugins = {
 	-- linting & formatting
 	"jose-elias-alvarez/null-ls.nvim",
 	"jay-babu/mason-null-ls.nvim",
+
+	-- git
+	"lewis6991/gitsigns.nvim",
+
+	-- console
+	"voldikss/vim-floaterm",
 }
 
 require("lazy").setup(plugins, opts)
