@@ -1,12 +1,12 @@
-local setup, tokyonight = pcall(require, 'tokyonight')
+local setup, tokyonight = pcall(require, "tokyonight")
 if not setup then
-  return
+	return
 end
 
 tokyonight.setup({
-  style = "storm",
-  transparent = true,
-  terminal_colors = true,
+	style = "storm",
+	transparent = true,
+	terminal_colors = true,
 })
 
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd([[colorscheme tokyonight]])

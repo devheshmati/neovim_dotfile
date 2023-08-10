@@ -62,6 +62,10 @@ local plugins = {
 
 	-- console
 	"voldikss/vim-floaterm",
+
+	"lukas-reineke/indent-blankline.nvim",
+	"norcalli/nvim-colorizer.lua",
+	"justinmk/vim-sneak",
 }
 
 require("lazy").setup(plugins, opts)

@@ -29,7 +29,7 @@ keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 keymap.set("n", "<leader>nt", vim.cmd.tabn)
 keymap.set("n", "<leader>pt", vim.cmd.tabp)
 keymap.set("n", "<leader>lt", vim.cmd.tabl)
-keymap.set("n", "<leader>ct", ":tabnew ")
+keymap.set("n", "<leader>ct", ":tabnew<cr>")
 
 -- line movement
 keymap.set("n", "<A-k>", ":m .-2<CR>")

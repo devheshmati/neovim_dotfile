@@ -22,7 +22,7 @@ opt.cursorline = true
 
 -- appearance
 opt.termguicolors = true
-opt.background = "dark" 
+opt.background = "dark"
 opt.signcolumn = "yes"
 
 -- backspace
@@ -35,6 +35,11 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
-opt.signcolumn = "yes" 
+opt.signcolumn = "yes"
 
 opt.iskeyword:append("-")
+
+-- folding
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevel = 99
+vim.opt.foldenable = true
