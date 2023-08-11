@@ -50,3 +50,6 @@ keymap.set("n", "<C-a>", "G<S-v>gg")
 
 -- terminal
 keymap.set("n", "<leader>to", ":FloatermToggle<cr>")
+
+-- formatting
+keymap.set("n", "<leader>fo", vim.lsp.buf.format)
