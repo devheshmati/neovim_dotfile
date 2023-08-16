@@ -19,7 +19,7 @@ local plugins = {
 	},
 	"nvim-telescope/telescope.nvim",
 	"windwp/nvim-autopairs",
-	"windwp/nvim-ts-autotag",
+	-- "windwp/nvim-ts-autotag",
 	"nvim-treesitter/nvim-treesitter",
 	"numToStr/Comment.nvim",
 	"christoomey/vim-tmux-navigator",
