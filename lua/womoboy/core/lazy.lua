@@ -31,7 +31,7 @@ local plugins = {
 
 	-- color scheme
 	-- "folke/tokyonight.nvim",
-  "rebelot/kanagawa.nvim",
+	"rebelot/kanagawa.nvim",
 
 	-- autocompletion
 	"hrsh7th/nvim-cmp",
