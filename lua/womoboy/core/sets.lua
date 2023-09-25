@@ -43,3 +43,6 @@ opt.iskeyword:append("-")
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99
 vim.opt.foldenable = true
+
+-- persian language
+vim.opt.termbidi = true

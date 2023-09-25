@@ -30,7 +30,8 @@ local plugins = {
 	"nvim-lualine/lualine.nvim",
 
 	-- color scheme
-	"folke/tokyonight.nvim",
+	-- "folke/tokyonight.nvim",
+  "rebelot/kanagawa.nvim",
 
 	-- autocompletion
 	"hrsh7th/nvim-cmp",
