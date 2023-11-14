@@ -13,7 +13,8 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
 -- nerd
-keymap.set("n", "<leader>e", ":Lex<cr>:vertical resize 30<cr>")
+-- keymap.set("n", "<leader>e", ":Lex<cr>:vertical resize 30<cr>") -- open build-in nerd tree
+keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>") -- open build-in nerd tree
 
 -- increse and decrease
 keymap.set("n", "<leader>9", "<C-x>")

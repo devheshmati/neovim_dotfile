@@ -29,6 +29,9 @@ local plugins = {
 	"kyazdani42/nvim-web-devicons",
 	"nvim-lualine/lualine.nvim",
 
+  -- file explorer
+  "nvim-tree/nvim-tree.lua",
+
 	-- color scheme
 	-- "folke/tokyonight.nvim",
 	"rebelot/kanagawa.nvim",
