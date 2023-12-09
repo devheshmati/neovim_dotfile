@@ -18,6 +18,7 @@ local plugins = {
 		build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
 	},
 	"nvim-telescope/telescope.nvim",
+  'nvim-telescope/telescope-live-grep-args.nvim',
 	"windwp/nvim-autopairs",
 	-- "windwp/nvim-ts-autotag",
 	"nvim-treesitter/nvim-treesitter",
