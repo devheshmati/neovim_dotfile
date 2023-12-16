@@ -18,7 +18,7 @@ local plugins = {
 		build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
 	},
 	"nvim-telescope/telescope.nvim",
-  'nvim-telescope/telescope-live-grep-args.nvim',
+	"nvim-telescope/telescope-live-grep-args.nvim",
 	"windwp/nvim-autopairs",
 	-- "windwp/nvim-ts-autotag",
 	"nvim-treesitter/nvim-treesitter",
@@ -30,8 +30,8 @@ local plugins = {
 	"kyazdani42/nvim-web-devicons",
 	"nvim-lualine/lualine.nvim",
 
-  -- file explorer
-  "nvim-tree/nvim-tree.lua",
+	-- file explorer
+	"nvim-tree/nvim-tree.lua",
 
 	-- color scheme
 	-- "folke/tokyonight.nvim",
@@ -70,7 +70,8 @@ local plugins = {
 
 	"lukas-reineke/indent-blankline.nvim",
 	"norcalli/nvim-colorizer.lua",
-	"justinmk/vim-sneak",
+	-- "justinmk/vim-sneak",
+	"phaazon/hop.nvim",
 }
 
 require("lazy").setup(plugins, opts)

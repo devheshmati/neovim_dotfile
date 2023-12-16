@@ -54,3 +54,6 @@ keymap.set("n", "<leader>to", ":FloatermToggle<cr>")
 
 -- formatting
 keymap.set("n", "<leader>fo", vim.lsp.buf.format)
+
+-- navigation
+keymap.set('n', "<leader>g", ":HopChar1<cr>")
