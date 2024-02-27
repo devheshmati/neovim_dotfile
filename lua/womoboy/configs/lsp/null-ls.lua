@@ -15,11 +15,11 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
 	-- setup formatters & linters
 	sources = {
-		--  to disable file types use
-		--  "formatting.prettier.with({disabled_filetypes = {}})" (see null-ls docs)
 		formatting.prettier, -- js/ts formatter
-    -- formatting.stylelint,
+		-- formatting.stylelint,
+		formatting.phpcbf,
 		formatting.stylua, -- lua formatter
+		diagnostics.php,
 		-- diagnostics.eslint_d.with({ -- js/ts linter
 		-- }),
 	},

@@ -23,7 +23,8 @@ mason_lspconfig.setup({
 		"tailwindcss",
 		"lua_ls",
 		"emmet_ls",
-    "pyright",
+		"pyright",
+		"intelephense",
 	},
 })
 
@@ -31,8 +32,9 @@ mason_null_ls.setup({
 	ensure_installed = {
 		"prettier",
 		-- "prettier_d_slime",
-    "stylelint",
+		"stylelint",
 		"stylua",
 		"eslint_d",
+		"phpcbf",
 	},
 })
