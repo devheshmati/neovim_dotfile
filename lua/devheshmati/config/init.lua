@@ -1,0 +1,1 @@
+require('devheshmati.config.telescope')
