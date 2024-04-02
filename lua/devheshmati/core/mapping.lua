@@ -28,7 +28,7 @@ keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
 keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
 
 -- float terminal
-keymap.set("n", "<leader>to", ":FloatermToggle")
+keymap.set("n", "<leader>to", ":FloatermToggle<cr>")
 
 -- general
 keymap.set("n", "<leader>nh", ":nohl<cr>")
@@ -37,3 +37,6 @@ keymap.set("n", "<C-a>", "G<S-v>gg")
 
 -- formatting
 keymap.set("n", "<leader>fo", vim.lsp.buf.format)
+
+-- nerdtree
+keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>")

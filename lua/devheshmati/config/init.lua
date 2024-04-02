@@ -1,1 +1,8 @@
 require('devheshmati.config.telescope')
+require('devheshmati.config.comment')
+require('devheshmati.config.theme')
+require('devheshmati.config.nvim-tree')
+require('devheshmati.config.nvim-web-devicons')
+require('devheshmati.config.nvim-surround')
+require('devheshmati.config.lsp.lspconfig')
+require('devheshmati.config.lsp.mason')
