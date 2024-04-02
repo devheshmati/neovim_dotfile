@@ -8,3 +8,8 @@ require('devheshmati.config.lsp.lspconfig')
 require('devheshmati.config.lsp.mason')
 require('devheshmati.config.lsp.null-ls')
 require('devheshmati.config.prettier')
+require('devheshmati.config.lualine')
+require('devheshmati.config.lsp.cmp')
+require('devheshmati.config.luasnip')
+require('devheshmati.config.lsp.lspkind')
+
