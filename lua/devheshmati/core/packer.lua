@@ -11,8 +11,8 @@ return require("packer").startup(function(use)
 
 	-- telescope
 	use({ "nvim-telescope/telescope.nvim", tag = "0.1.4" })
+	use("nvim-telescope/telescope-file-browser.nvim")
 	use("numToStr/Comment.nvim")
-	use("folke/tokyonight.nvim")
 	use("nvim-tree/nvim-tree.lua")
 
 	-- suround plugin for better experience
@@ -22,7 +22,10 @@ return require("packer").startup(function(use)
 	use("neovim/nvim-lspconfig")
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
+	use("nvimtools/none-ls.nvim")
+	use("jay-babu/mason-null-ls.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
+	use("nvimdev/lspsaga.nvim")
 
 	-- cmp for autocompletion
 	use("hrsh7th/cmp-nvim-lsp")
@@ -41,8 +44,14 @@ return require("packer").startup(function(use)
 	-- tmux navigator
 	use("christoomey/vim-tmux-navigator")
 
+	-- theme
+	use("folke/tokyonight.nvim")
+
 	-- prettier
 	use("MunifTanjim/prettier.nvim")
+
+	-- treesitter
+	use("nvim-treesitter/nvim-treesitter")
 
 	-- lua line status bar
 	use("nvim-lualine/lualine.nvim")

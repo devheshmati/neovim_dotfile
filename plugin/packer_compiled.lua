@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/womoboy/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
     url = "https://github.com/onsails/lspkind.nvim"
   },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/womoboy/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/nvimdev/lspsaga.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/womoboy/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -119,10 +124,20 @@ _G.packer_plugins = {
     path = "/home/womoboy/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
+  ["mason-null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/womoboy/.local/share/nvim/site/pack/packer/start/mason-null-ls.nvim",
+    url = "https://github.com/jay-babu/mason-null-ls.nvim"
+  },
   ["mason.nvim"] = {
     loaded = true,
     path = "/home/womoboy/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["none-ls.nvim"] = {
+    loaded = true,
+    path = "/home/womoboy/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
+    url = "https://github.com/nvimtools/none-ls.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -149,6 +164,11 @@ _G.packer_plugins = {
     path = "/home/womoboy/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/womoboy/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/womoboy/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -168,6 +188,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/womoboy/.local/share/nvim/site/pack/packer/start/prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
+  },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "/home/womoboy/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

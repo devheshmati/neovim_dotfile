@@ -12,4 +12,5 @@ require('devheshmati.config.lualine')
 require('devheshmati.config.lsp.cmp')
 require('devheshmati.config.luasnip')
 require('devheshmati.config.lsp.lspkind')
-
+require('devheshmati.config.treesitter')
+require('devheshmati.config.lsp.lspsaga')
