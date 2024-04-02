@@ -3,8 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use('wbthomason/packer.nvim')
-
-  -- general
+-- general
   use('nvim-lua/plenary.nvim')
 
   -- icon, need nerd font to download
@@ -23,7 +22,14 @@ return require('packer').startup(function(use)
   use("neovim/nvim-lspconfig")
   use("williamboman/mason.nvim")
   use("williamboman/mason-lspconfig.nvim")
+  use('jose-elias-alvarez/null-ls.nvim')
 
   -- tereminal foaterm
   use('voldikss/vim-floaterm')
+
+  -- tmux navigator
+  use('christoomey/vim-tmux-navigator')
+
+  -- prettier
+  use('MunifTanjim/prettier.nvim')
 end)
