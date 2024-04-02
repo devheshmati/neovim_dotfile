@@ -6,11 +6,20 @@ local keymap = vim.keymap
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
-keymap.set("n", "<leader>pv", "<cmd>Telescope file_browser<cr>") -- find files within current working directory, respects .gitignore
+keymap.set("n", "<leader>pv", "<cmd>NvimTreeClose<cr><cmd>Telescope file_browser<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+
+-- bufferline
+keymap.set("n", "<leader>b1", "<cmd>BufferLineGoToBuffer 1<cr>") -- find string in current working directory as you type
+keymap.set("n", "<leader>b2", "<cmd>BufferLineGoToBuffer 2<cr>") -- find string in current working directory as you type
+keymap.set("n", "<leader>b3", "<cmd>BufferLineGoToBuffer 3<cr>") -- find string in current working directory as you type
+keymap.set("n", "<leader>b4", "<cmd>BufferLineGoToBuffer 4<cr>") -- find string in current working directory as you type
+keymap.set("n", "<leader>b5", "<cmd>BufferLineGoToBuffer 5<cr>") -- find string in current working directory as you type
+keymap.set("n", "<leader>b6", "<cmd>BufferLineGoToBuffer 6<cr>") -- find string in current working directory as you type
+keymap.set("n", "<leader>bc", "<cmd>BufferLinePickClose<cr>") -- find string in current working directory as you type
 
 -- increse and decrease
 keymap.set("n", "<leader>9", "<C-x>")

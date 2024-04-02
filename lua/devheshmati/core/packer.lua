@@ -55,4 +55,13 @@ return require("packer").startup(function(use)
 
 	-- lua line status bar
 	use("nvim-lualine/lualine.nvim")
+
+	-- bufferline
+	use("akinsho/bufferline.nvim")
+
+	-- color code show in terminal
+	use("norcalli/nvim-colorizer.lua")
+
+  -- auto close symbol when typing one of thom
+	use("windwp/nvim-autopairs")
 end)
