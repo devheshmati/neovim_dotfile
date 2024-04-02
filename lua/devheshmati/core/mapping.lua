@@ -12,6 +12,9 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string u
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
+-- highlight scope twilight
+keymap.set("n", "<leader>tl", ":Twilight<cr>")
+
 -- bufferline
 keymap.set("n", "<leader>b1", "<cmd>BufferLineGoToBuffer 1<cr>") -- find string in current working directory as you type
 keymap.set("n", "<leader>b2", "<cmd>BufferLineGoToBuffer 2<cr>") -- find string in current working directory as you type
@@ -48,5 +51,5 @@ keymap.set("n", "<C-a>", "G<S-v>gg")
 -- formatting
 keymap.set("n", "<leader>fo", vim.lsp.buf.format)
 
--- nerdtree
+-- sidebar file explorer
 keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>")
