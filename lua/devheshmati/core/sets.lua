@@ -50,3 +50,34 @@ vim.opt.termbidi = true
 -- permision
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- fix html syntax highlight in laravel blade
+-- if vim.bo.filetype == "lua" then
+--   -- vim.api.nvim_command('echo "file is blade"')
+--   print('This is a lua file')
+-- end
+
+-- vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+--     callback = function()
+--         if vim.bo.filetype == "lua" then
+--             print("this is a lua file")
+--         end
+--     end
+-- })
+
+-- vim.api.nvim_create_autocmd("FileType", {
+--     pattern = "lua",
+--     callback = function()
+--         print("this is a lua file")
+--     end
+-- })
+
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function()
+    local ft = vim.bo.filetype
+    if ft == 'blade' then
+      vim.cmd('set ft=php')
+    end
+    -- vim.cmd("echo 'Filetype: ' .. vim.bo.filetype")
+  end
+})
