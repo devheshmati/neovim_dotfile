@@ -1,119 +1,119 @@
 vim.cmd([[packadd packer.nvim]])
 
 local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+	local fn = vim.fn
+	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+	if fn.empty(fn.glob(install_path)) > 0 then
+		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+		vim.cmd([[packadd packer.nvim]])
+		return true
+	end
+	return false
 end
 
 local packer_bootstrap = ensure_packer()
 
-require('packer').init({
-  git = {
-    clone_timeout = 300, -- Timeout in seconds
-  }
+require("packer").init({
+	git = {
+		clone_timeout = 300, -- Timeout in seconds
+	},
 })
 
 return require("packer").startup(function(use)
-  -- Packer can manage itself
-  use("wbthomason/packer.nvim")
-  -- general
-  use("nvim-lua/plenary.nvim")
+	-- Packer can manage itself
+	use("wbthomason/packer.nvim")
+	-- general
+	use("nvim-lua/plenary.nvim")
 
-  -- icon, need nerd font to download
-  use("nvim-tree/nvim-web-devicons")
+	-- icon, need nerd font to download
+	use("nvim-tree/nvim-web-devicons")
 
-  -- telescope
-  use({ "nvim-telescope/telescope.nvim", tag = "0.1.4" })
-  use("nvim-telescope/telescope-file-browser.nvim")
-  use("numToStr/Comment.nvim")
-  use("nvim-tree/nvim-tree.lua")
+	-- telescope
+	use({ "nvim-telescope/telescope.nvim", tag = "0.1.4" })
+	use("nvim-telescope/telescope-file-browser.nvim")
+	use("numToStr/Comment.nvim")
+	use("nvim-tree/nvim-tree.lua")
 
-  -- suround plugin for better experience
-  use("kylechui/nvim-surround")
+	-- suround plugin for better experience
+	use("kylechui/nvim-surround")
 
-  -- lsp
-  use("neovim/nvim-lspconfig")
-  use("williamboman/mason.nvim")
-  use("williamboman/mason-lspconfig.nvim")
-  use("nvimtools/none-ls.nvim")
-  use("jose-elias-alvarez/null-ls.nvim")
-  use("nvimdev/lspsaga.nvim")
+	-- lsp
+	use("neovim/nvim-lspconfig")
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
+	use("nvimtools/none-ls.nvim")
+	use("jose-elias-alvarez/null-ls.nvim")
+	use("nvimdev/lspsaga.nvim")
 
-  -- cmp for autocompletion
-  use("hrsh7th/cmp-nvim-lsp")
-  use("hrsh7th/cmp-buffer")
-  use("hrsh7th/cmp-path")
-  use("hrsh7th/cmp-cmdline")
-  use("hrsh7th/nvim-cmp")
-  use("saadparwaiz1/cmp_luasnip")
-  use("onsails/lspkind.nvim")
-  use("rafamadriz/friendly-snippets")
+	-- cmp for autocompletion
+	use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/cmp-buffer")
+	use("hrsh7th/cmp-path")
+	use("hrsh7th/cmp-cmdline")
+	use("hrsh7th/nvim-cmp")
+	use("saadparwaiz1/cmp_luasnip")
+	use("onsails/lspkind.nvim")
+	use("rafamadriz/friendly-snippets")
 
-  -- lua snip
-  use({
-    "L3MON4D3/LuaSnip",
-    -- follow latest release.
-    tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-    -- install jsregexp (optional!:).
-    run = "make install_jsregexp",
-  })
+	-- lua snip
+	use({
+		"L3MON4D3/LuaSnip",
+		-- follow latest release.
+		tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		-- install jsregexp (optional!:).
+		run = "make install_jsregexp",
+	})
 
-  -- tereminal foaterm
-  use("voldikss/vim-floaterm")
+	-- tereminal foaterm
+	use("voldikss/vim-floaterm")
 
-  -- tmux navigator
-  use("christoomey/vim-tmux-navigator")
+	-- tmux navigator
+	use("christoomey/vim-tmux-navigator")
 
-  -- theme
-  use("folke/tokyonight.nvim")
+	-- theme
+	use("folke/tokyonight.nvim")
 
-  -- prettier
-  use("MunifTanjim/prettier.nvim")
+	-- prettier
+	use("MunifTanjim/prettier.nvim")
 
-  -- treesitter
-  use("nvim-treesitter/nvim-treesitter")
-  use({
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    after = "nvim-treesitter",
-    requires = "nvim-treesitter/nvim-treesitter",
-  })
+	-- treesitter
+	use("nvim-treesitter/nvim-treesitter")
+	use({
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		after = "nvim-treesitter",
+		requires = "nvim-treesitter/nvim-treesitter",
+	})
 
-  -- lua line status bar
-  use("nvim-lualine/lualine.nvim")
+	-- lua line status bar
+	use("nvim-lualine/lualine.nvim")
 
-  -- bufferline
-  use("akinsho/bufferline.nvim")
+	-- bufferline
+	use("akinsho/bufferline.nvim")
 
-  -- color code show in terminal
-  use("norcalli/nvim-colorizer.lua")
+	-- color code show in terminal
+	use("norcalli/nvim-colorizer.lua")
 
-  -- auto close symbol when typing one of thom
-  use("windwp/nvim-autopairs")
+	-- auto close symbol when typing one of thom
+	use("windwp/nvim-autopairs")
 
-  -- highlight scope
-  use("folke/twilight.nvim")
+	-- highlight scope
+	use("folke/twilight.nvim")
 
-  -- indent line link for scope
-  use("lukas-reineke/indent-blankline.nvim")
+	-- indent line link for scope
+	use("lukas-reineke/indent-blankline.nvim")
 
-  -- jump like jinja
-  use('easymotion/vim-easymotion')
+	-- jump like jinja
+	use("easymotion/vim-easymotion")
 
-  -- add AI dependencies
-  -- use({ "stevearc/dressing.nvim" })
-  -- use({ "MunifTanjim/nui.nvim" })
-  -- use({ "echasnovski/mini.pick" })
-  -- use({ "ibhagwan/fzf-lua" })
-  -- use({ "zbirenbaum/copilot.lua" })
-  -- use({ "HakonHarnes/img-clip.nvim" })
-  -- use({ 'MeanderingProgrammer/render-markdown.nvim' })
+	-- add AI dependencies
+	-- use({ "stevearc/dressing.nvim" })
+	-- use({ "MunifTanjim/nui.nvim" })
+	-- use({ "echasnovski/mini.pick" })
+	-- use({ "ibhagwan/fzf-lua" })
+	-- use({ "zbirenbaum/copilot.lua" })
+	-- use({ "HakonHarnes/img-clip.nvim" })
+	-- use({ 'MeanderingProgrammer/render-markdown.nvim' })
 
-  -- add AI tools
-  -- use ({ 'codota/tabnine-nvim', run = "./dl_binaries.sh" })
+	-- add AI tools
+	-- use ({ 'codota/tabnine-nvim', run = "./dl_binaries.sh" })
 end)
