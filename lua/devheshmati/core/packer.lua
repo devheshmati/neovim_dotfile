@@ -11,7 +11,7 @@ local ensure_packer = function()
 	return false
 end
 
-local packer_bootstrap = ensure_packer()
+-- local packer_bootstrap = ensure_packer()
 
 require("packer").init({
 	git = {
@@ -22,16 +22,23 @@ require("packer").init({
 return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
-	-- general
-	use("nvim-lua/plenary.nvim")
 
-	-- icon, need nerd font to download
+	-- requires base packages
+	use("nvim-lua/plenary.nvim")
 	use("nvim-tree/nvim-web-devicons")
 
 	-- telescope
-	use({ "nvim-telescope/telescope.nvim", tag = "0.1.4" })
-	use("nvim-telescope/telescope-file-browser.nvim")
+	use({ "nvim-telescope/telescope.nvim" })
+	use({
+		"nvim-telescope/telescope-fzf-native.nvim",
+		run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
+	})
+	use({ "BurntSushi/ripgrep" })
+
+	-- comment plugin
 	use("numToStr/Comment.nvim")
+
+	-- sidebar explorer
 	use("nvim-tree/nvim-tree.lua")
 
 	-- suround plugin for better experience
@@ -41,11 +48,12 @@ return require("packer").startup(function(use)
 	use("neovim/nvim-lspconfig")
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
-	use("nvimtools/none-ls.nvim")
+
+	-- for formatter
 	use("jose-elias-alvarez/null-ls.nvim")
-	use("nvimdev/lspsaga.nvim")
 
 	-- cmp for autocompletion
+
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
@@ -54,15 +62,8 @@ return require("packer").startup(function(use)
 	use("saadparwaiz1/cmp_luasnip")
 	use("onsails/lspkind.nvim")
 	use("rafamadriz/friendly-snippets")
-
-	-- lua snip
-	use({
-		"L3MON4D3/LuaSnip",
-		-- follow latest release.
-		tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-		-- install jsregexp (optional!:).
-		run = "make install_jsregexp",
-	})
+	use("hrsh7th/cmp-vsnip")
+	use("hrsh7th/vim-vsnip")
 
 	-- tereminal foaterm
 	use("voldikss/vim-floaterm")
@@ -73,22 +74,18 @@ return require("packer").startup(function(use)
 	-- theme
 	use("folke/tokyonight.nvim")
 
-	-- prettier
-	use("MunifTanjim/prettier.nvim")
-
 	-- treesitter
 	use("nvim-treesitter/nvim-treesitter")
 	use({
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		after = "nvim-treesitter",
-		requires = "nvim-treesitter/nvim-treesitter",
 	})
 
 	-- lua line status bar
 	use("nvim-lualine/lualine.nvim")
 
 	-- bufferline
-	use("akinsho/bufferline.nvim")
+	-- use("akinsho/bufferline.nvim")
 
 	-- color code show in terminal
 	use("norcalli/nvim-colorizer.lua")
