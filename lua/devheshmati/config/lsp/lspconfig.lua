@@ -5,12 +5,24 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 -- lua language
 lspconfig.lua_ls.setup({})
 
--- thsi is for html & css
-lspconfig.html.setup({})
+lspconfig.html.setup({
+	filetypes = { "html", "php" }, -- Ensure PHP is included
+	init_options = {
+		embeddedLanguages = { css = true, javascript = true },
+	},
+	capabilities = require("cmp_nvim_lsp").default_capabilities(),
+})
+
 lspconfig.cssls.setup({ capabilities = capabilities })
 
 -- emmet for fast coding
-lspconfig.emmet_language_server.setup({})
+lspconfig.emmet_ls.setup({
+  capabilities = capabilities,
+	filetypes = { "html", "php" },
+	init_options = {
+		extensions = { "html", "php" },
+	},
+})
 
 -- javascript feautres
 lspconfig.eslint.setup({

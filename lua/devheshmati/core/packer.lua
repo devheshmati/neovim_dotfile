@@ -102,6 +102,9 @@ return require("packer").startup(function(use)
 	-- jump like jinja
 	use("easymotion/vim-easymotion")
 
+	-- emmet
+	use("mattn/emmet-vim") -- Enhanced HTML expansion
+
 	-- add AI dependencies
 	-- use({ "stevearc/dressing.nvim" })
 	-- use({ "MunifTanjim/nui.nvim" })
