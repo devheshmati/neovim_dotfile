@@ -105,6 +105,14 @@ return require("packer").startup(function(use)
 	-- emmet
 	use("mattn/emmet-vim") -- Enhanced HTML expansion
 
+	-- add vim-blade
+	use({
+		"jwalton512/vim-blade",
+		config = function()
+			vim.g.blade_custom_detectors = 0 -- غیرفعال کردن تشخیص خودکار
+		end,
+	})
+
 	-- add AI dependencies
 	-- use({ "stevearc/dressing.nvim" })
 	-- use({ "MunifTanjim/nui.nvim" })
