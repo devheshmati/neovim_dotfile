@@ -1,39 +1,71 @@
-# 💤 LazyVim
+# 🚀 LazyVim - Laravel Focused Setup ⚡️
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+Welcome to my personal LazyVim configuration, tailored for Laravel and PHP developers! 🎉 This setup builds upon the fantastic [LazyVim](https://github.com/LazyVim/LazyVim) framework, adding specific tweaks and enhancements to streamline your workflow.
 
-## How use it?
+## ✨ Features
 
-### back up the current neovim configs and remove cache
-mv ~/.local/share/nvim ~/.local/share/nvim.bk &&
-mv ~/.local/state/nvim ~/.local/state/nvim.bk &&
-rm -rf ~/.cache/nvim
+* **Blade Syntax Highlighting Fix:** Enjoy accurate and vibrant syntax highlighting for your Blade templates. 🎨
+* **Blade Formatting:** Keep your Blade files clean and consistent with integrated formatting. 🧹
+* **Laravel Focused Tweaks:** Optimized configurations for a smooth Laravel development experience. 🛠️
+* **LazyVim Power:** Leverage the speed and flexibility of LazyVim with a well-structured and documented setup. 📖
 
-### clone the project
-Use git clone <this repository url> ~/.config/nvim
+## 📦 Installation
 
-Open neovim and enjoy.
-nvim . or nvim command in terminal
+**Important:** Before proceeding, back up your existing Neovim configuration and clear the cache.
 
-### About my configs
-Actually i use LazyVim because is easy to used, have good documents, standard structure. All in one!
-I change some of configs and add some of features that's not much but it's good for Laravel and php developers.
+1.  **Backup and Clean:**
 
-### What you need!
-You should understand about how install packages in your operating system and how use package manager. for me i use Arch linux i use pacman and yay package manager.
+    ```bash
+    mv ~/.local/share/nvim ~/.local/share/nvim.bk &&
+    mv ~/.local/state/nvim ~/.local/state/nvim.bk &&
+    rm -rf ~/.cache/nvim
+    ```
 
-the directories of configs in linux are ~/.config/nvim. If you use mac or windows that's the same config just directories are different. just search about that and read documentery where is the directories for neovim configs.
+2.  **Clone the Repository:**
 
-For compiling the some packages you need to install some default software and technologies like nodejs, cmake, g++ or something like that, you can use :checkheath in neovim for show the information what you need. Actually you can find every messages and errors in neovim with :messages command in neovim.
+    ```bash
+    git clone <THIS_REPOSITORY_URL> ~/.config/nvim
+    ```
 
-So remember use :checkheath and :messages command in neovim!
+3.  **Launch Neovim:**
 
-### How customized?
-Everything you need is just reading LazyVim documentation. actualy is use it, i just adapted for laravel environment. so Everything you need to customized is easy by reading lazyvim documentation.
+    ```bash
+    nvim .
+    ```
 
-### If using the lazyvim why should use this config!?
-Actually if you using Laravel environment, You can use this because i fixed blade templates syntax highlighting and optimize some of feautres. Blade formatter and yep..!
+    LazyVim will automatically install the necessary plugins. Sit back and relax! ☕
 
-### Another brannches
-Actually if you want to use packer is have good start point, you can use the this repo branches, you can use the last branch of this repo, but i recommand you using this!
+    !!! You should installed NeoVim before :)
+
+## 💡 About My Configuration
+
+I chose LazyVim for its simplicity, excellent documentation, and modular structure. This configuration enhances the standard LazyVim setup with Laravel-specific features, making it a powerful tool for PHP development.
+
+## 🛠️ Prerequisites
+
+* Understanding of your operating system's package manager (e.g., `pacman`, `yay`, `apt`, `brew`).
+* Basic knowledge of Neovim configuration directories (e.g., `~/.config/nvim` on Linux/macOS).
+* Required build tools (e.g., `nodejs`, `cmake`, `g++`). Use `:checkhealth` in Neovim to identify missing dependencies.
+
+    * **Tip:** Use `:checkhealth` and `:messages` within Neovim to troubleshoot issues. 🔍
+
+## ⚙️ Customization
+
+LazyVim's documentation is your best friend! 🤝 All configurations are easily customizable by modifying the files within `~/.config/nvim/lua/config/`. Feel free to adapt this setup to your specific needs.
+
+## ❓ Why Use This Configuration?
+
+If you're a Laravel developer, this configuration offers:
+
+* Out-of-the-box Blade syntax highlighting and formatting.
+* Optimized settings for a seamless Laravel workflow.
+
+## 📂 Alternate Branches
+
+If you're interested in a Packer-based configuration, check out the older branches of this repository. However, I highly recommend using the LazyVim setup for its modern features and ease of use.
+
+## 🤝 Contributions
+
+Feel free to open issues or submit pull requests with improvements or bug fixes! Let's make this configuration even better. ✨
+
+I try to updated that if needed!
