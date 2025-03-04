@@ -68,4 +68,14 @@ If you're interested in a Packer-based configuration, check out the older branch
 
 Feel free to open issues or submit pull requests with improvements or bug fixes! Let's make this configuration even better. ✨
 
+## Lsp language recommended
+* Use Mason command for installing lsp languages!
+- intelephense
+- blade-foramtter
+- stylua
+- lua-language-server
+- lsp-json
+- shfmt
+- vtsls 
+
 I try to updated that if needed!
