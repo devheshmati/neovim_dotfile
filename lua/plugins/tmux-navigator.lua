@@ -1,3 +1,4 @@
+-- This is for navigate between tmux and neovim panes
 return {
   "christoomey/vim-tmux-navigator",
   cmd = {
