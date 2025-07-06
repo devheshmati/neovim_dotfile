@@ -1,8 +1,0 @@
-require("lua/plugins/nvim-devicon")
-require("lua/plugins/nvim-tree")
-require("lua/plugins/telescope")
-require("lua/plugins/lsp")
-require("lua/plugins/mason")
-require("lua/plugins/none-ls")
--- require("lua/plugins/luasnip")
--- require("lua/plugins/completion")
