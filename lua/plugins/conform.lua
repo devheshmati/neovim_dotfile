@@ -2,7 +2,7 @@ return {
   {
     "stevearc/conform.nvim",
     event = { "BufWritePre" },
-    opts = function()
+    opts = {
       require("conform").setup({
         formatters_by_ft = {
           blade = { "blade-formatter" },
@@ -13,14 +13,14 @@ return {
           json = { "prettierd" },
           html = { "prettierd" },
           css = { "prettierd" },
-          python = { "ast_grep" },
+          python = { "black" },
         },
         format_on_save = {
           timeout_ms = 500,
           lsp_fallback = true,
         },
-      })
-    end,
+      }),
+    },
   },
 
   vim.filetype.add({
