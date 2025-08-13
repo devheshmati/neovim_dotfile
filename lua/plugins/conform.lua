@@ -6,11 +6,11 @@ return {
       require("conform").setup({
         formatters_by_ft = {
           blade = { "blade-formatter" },
-          php = { "phpcbf" },
+          -- php = { "phpcbf" },
           lua = { "stylua" },
           javascript = { "prettierd" },
           typescript = { "prettierd" },
-          json = { "prettierd" },
+          json = { "fixjson" },
           html = { "prettierd" },
           css = { "prettierd" },
           python = { "black" },
