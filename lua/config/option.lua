@@ -1,4 +1,4 @@
--- disable netrw at the very start of your init.lua
+-- disable default neovim file explorer
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -7,8 +7,10 @@ vim.opt.termguicolors = true
 vim.opt.relativenumber = true
 vim.opt.number = true
 
+-- allow copy text from neovim
 vim.opt.clipboard = "unnamedplus"
 
+-- tab space config (indentation)
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true

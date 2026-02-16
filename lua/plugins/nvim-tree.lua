@@ -1,17 +1,16 @@
+local config = {
+  sort = {
+    sorter = "case_sensitive",
+  },
+  view = {
+    width = 30,
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+}
 
-  ---@type nvim_tree.config
-  local config = {
-    sort = {
-      sorter = "case_sensitive",
-    },
-    view = {
-      width = 30,
-    },
-    renderer = {
-      group_empty = true,
-    },
-    filters = {
-      dotfiles = true,
-    },
-  }
-  require("nvim-tree").setup(config)
+require("nvim-tree").setup(config)
