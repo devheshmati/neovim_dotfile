@@ -22,5 +22,6 @@ require('pckr').add{
 	"tpope/vim-commentary",
 	"nvim-lua/plenary.nvim",
 	"nvim-telescope/telescope-fzf-native.nvim",
-	"nvim-telescope/telescope.nvim"
+	"nvim-telescope/telescope.nvim",
+	"karb94/neoscroll.nvim",
 }
