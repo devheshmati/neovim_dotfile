@@ -1,3 +1,6 @@
 require('plugins.nvim-tree')
 require('plugins.telescope')
 require('plugins.neoscroll')
+require('plugins.conform')
+require('plugins.mason')
+require('plugins.mason-conform')
