@@ -17,6 +17,9 @@ vim.opt.expandtab = true
 vim.opt.smarttab = true
 vim.opt.autoindent = true
 
+-- wrap line code for clean showing long line of code
+vim.opt.wrap = false
+
 -- this is for educational for custiomize tab indentation space for special file type, in this example for HTML
 -- vim.api.nvim_create_autocmd("FileType", {
 --   pattern = "html",
