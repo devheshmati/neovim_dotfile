@@ -19,7 +19,6 @@ bootstrap_pckr()
 require("pckr").add({
 	"nvim-tree/nvim-tree.lua",
 	"nvim-tree/nvim-web-devicons",
-	"tpope/vim-commentary",
 	"nvim-lua/plenary.nvim",
 	"nvim-telescope/telescope-fzf-native.nvim",
 	"nvim-telescope/telescope.nvim",
@@ -28,4 +27,7 @@ require("pckr").add({
 	"williamboman/mason.nvim",
 	"zapling/mason-conform.nvim",
 	"christoomey/vim-tmux-navigator",
+	"nvim-treesitter/nvim-treesitter",
+	-- "numToStr/Comment.nvim",
+	"dmmulroy/tsc.nvim",
 })

@@ -20,6 +20,10 @@ vim.opt.autoindent = true
 -- wrap line code for clean showing long line of code
 vim.opt.wrap = false
 
+-- delay for commenting
+vim.opt.updatetime = 100
+-- vim.opt.commentstring = '?? %s'
+
 -- this is for educational for custiomize tab indentation space for special file type, in this example for HTML
 -- vim.api.nvim_create_autocmd("FileType", {
 --   pattern = "html",
