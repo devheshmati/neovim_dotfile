@@ -28,6 +28,7 @@ require("pckr").add({
 	"zapling/mason-conform.nvim",
 	"christoomey/vim-tmux-navigator",
 	"nvim-treesitter/nvim-treesitter",
-	-- "numToStr/Comment.nvim",
 	"dmmulroy/tsc.nvim",
+	"lewis6991/gitsigns.nvim",
+	"romgrk/barbar.nvim",
 })
