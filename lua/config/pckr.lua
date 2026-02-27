@@ -31,6 +31,9 @@ require("pckr").add({
 	"dmmulroy/tsc.nvim",
 	"lewis6991/gitsigns.nvim",
 	"romgrk/barbar.nvim",
-	"folke/tokyonight.nvim",
 	-- "numToStr/Comment.nvim",
+	-- "folke/tokyonight.nvim",
+	-- "jacoborus/tender.vim",
+	-- 'https://codeberg.org/evergarden/nvim.git',
+	'bluz71/vim-nightfly-colors',
 })
