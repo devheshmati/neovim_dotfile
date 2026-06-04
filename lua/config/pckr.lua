@@ -34,5 +34,6 @@ require("pckr").add({
 	-- "numToStr/Comment.nvim",
 	-- "folke/tokyonight.nvim",
 	-- "jacoborus/tender.vim",
-	'https://codeberg.org/evergarden/nvim.git',
+	"https://codeberg.org/evergarden/nvim.git",
+	"easymotion/vim-easymotion",
 })

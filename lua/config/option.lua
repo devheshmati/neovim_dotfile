@@ -14,8 +14,8 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
-vim.opt.smarttab = true
-vim.opt.autoindent = true
+vim.opt.smarttab = true 
+vim.opt.autoindent = true 
 
 -- wrap line code for clean showing long line of code
 vim.opt.wrap = false
@@ -35,3 +35,5 @@ vim.opt.ignorecase = true
 --     vim.opt_local.expandtab   = true
 --   end,
 -- })
+
+vim.g.EasyMotion_do_mapping = 0
