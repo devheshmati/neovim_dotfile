@@ -54,5 +54,8 @@ require("pckr").add({
 	"saadparwaiz1/cmp_luasnip",
 	"hrsh7th/cmp-vsnip",
 	"hrsh7th/vim-vsnip",
-  "rafamadriz/friendly-snippets",
+	"rafamadriz/friendly-snippets",
+
+	-- icons
+	"onsails/lspkind.nvim",
 })
