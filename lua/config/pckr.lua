@@ -24,16 +24,34 @@ require("pckr").add({
 	"nvim-telescope/telescope.nvim",
 	"karb94/neoscroll.nvim",
 	"stevearc/conform.nvim",
-	"williamboman/mason.nvim",
-	"zapling/mason-conform.nvim",
 	"christoomey/vim-tmux-navigator",
 	"nvim-treesitter/nvim-treesitter",
 	"dmmulroy/tsc.nvim",
 	"lewis6991/gitsigns.nvim",
 	"romgrk/barbar.nvim",
-	-- "numToStr/Comment.nvim",
-	-- "folke/tokyonight.nvim",
-	-- "jacoborus/tender.vim",
 	"https://codeberg.org/evergarden/nvim.git",
 	"easymotion/vim-easymotion",
+
+	-- lsp & mason
+	"mason-org/mason.nvim",
+	"mason-org/mason-lspconfig.nvim",
+	"neovim/nvim-lspconfig",
+	"zapling/mason-conform.nvim",
+
+	-- auto-completion engine & source
+	"hrsh7th/nvim-cmp",
+	"hrsh7th/cmp-nvim-lsp",
+	"hrsh7th/cmp-buffer",
+	"hrsh7th/cmp-path",
+	{
+		"L3MON4D3/LuaSnip",
+		-- follow latest release.
+		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		-- install jsregexp (optional!).
+		build = "make install_jsregexp",
+	},
+	"hrsh7th/cmp-cmdline",
+	"saadparwaiz1/cmp_luasnip",
+	"hrsh7th/cmp-vsnip",
+	"hrsh7th/vim-vsnip",
 })
