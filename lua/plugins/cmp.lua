@@ -93,5 +93,15 @@ vim.lsp.config("lua_ls", {
 	capabilities = capabilities,
 })
 
+vim.lsp.config("pyright", {
+	capabilities = capabilities,
+})
+
+vim.lsp.config("djls", {
+	capabilities = capabilities,
+})
+
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("lua_ls")
+vim.lsp.enable("pyright")
+vim.lsp.enable("djls")

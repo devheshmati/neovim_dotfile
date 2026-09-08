@@ -42,11 +42,14 @@ vim.g.EasyMotion_smartcase = 1
 
 -- 2-character search and jump (s{char}{char}{label})
 -- This matches your second example, which is usually the most comfortable!
-vim.keymap.set('n', 's', '<Plug>(easymotion-overwin-f2)', { remap = true, desc = 'EasyMotion 2-char jump' })
+vim.keymap.set("n", "s", "<Plug>(easymotion-overwin-f2)", { remap = true, desc = "EasyMotion 2-char jump" })
 
 -- Alternative: 1-character search and jump (uncomment if you prefer it over f2)
 -- vim.keymap.set('n', 's', '<Plug>(easymotion-overwin-f)', { remap = true, desc = 'EasyMotion 1-char jump' })
 
 -- JK motions: Line motions
-vim.keymap.set({'n', 'v', 'o'}, '<Leader>j', '<Plug>(easymotion-j)', { remap = true, desc = 'EasyMotion line down' })
-vim.keymap.set({'n', 'v', 'o'}, '<Leader>k', '<Plug>(easymotion-k)', { remap = true, desc = 'EasyMotion line up' })
+vim.keymap.set({ "n", "v", "o" }, "<Leader>j", "<Plug>(easymotion-j)", { remap = true, desc = "EasyMotion line down" })
+vim.keymap.set({ "n", "v", "o" }, "<Leader>k", "<Plug>(easymotion-k)", { remap = true, desc = "EasyMotion line up" })
+
+-- rename
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename Symbol" })
