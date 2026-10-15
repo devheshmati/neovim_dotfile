@@ -2,7 +2,6 @@ local cmp = require("cmp")
 local luasnip = require("luasnip")
 local lspkind = require("lspkind")
 
-require("luasnip.loaders.from_vscode").lazy_load()
 cmp.setup({
 	snippet = {
 		expand = function(args)
@@ -73,6 +72,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 -- new method
 vim.lsp.config("ts_ls", {
 	capabilities = capabilities,
+	filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
 	settings = {
 		typescript = {
 			inlayHints = {
@@ -101,6 +101,64 @@ vim.lsp.config("djls", {
 	capabilities = capabilities,
 })
 
+-- Vue language server (Volar)
+vim.lsp.config("vue_ls", {
+	capabilities = capabilities,
+	filetypes = { "vue" },
+	init_options = {
+		vue = {
+			hybridMode = false, -- set true if you also want ts_ls to handle the <script> block
+		},
+	},
+})
+
+-- Emmet for HTML/JSX/Vue template shortcuts
+vim.lsp.config("emmet_language_server", {
+	capabilities = capabilities,
+	filetypes = {
+		"html",
+		"css",
+		"scss",
+		"javascriptreact",
+		"typescriptreact",
+		"vue",
+		"svelte",
+	},
+})
+
+-- HTML
+vim.lsp.config("html", {
+	capabilities = capabilities,
+	filetypes = { "html", "vue" },
+})
+
+-- CSS
+vim.lsp.config("cssls", {
+	capabilities = capabilities,
+	filetypes = { "css", "scss", "less", "vue" },
+})
+
+-- Tailwind (only if you use it in Nuxt)
+vim.lsp.config("tailwindcss", {
+	capabilities = capabilities,
+	filetypes = {
+		"html",
+		"css",
+		"scss",
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"vue",
+		"svelte",
+	},
+})
+
+vim.lsp.enable("vue_ls")
+vim.lsp.enable("emmet_language_server")
+vim.lsp.enable("html")
+vim.lsp.enable("cssls")
+vim.lsp.enable("tailwindcss") -- remove if not using Tailwind
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("pyright")

@@ -39,6 +39,7 @@ require("pckr").add({
 	"zapling/mason-conform.nvim",
 
 	-- auto-completion engine & source
+	-- cmp
 	"hrsh7th/nvim-cmp",
 	"hrsh7th/cmp-nvim-lsp",
 	"hrsh7th/cmp-buffer",
@@ -52,8 +53,6 @@ require("pckr").add({
 	},
 	"hrsh7th/cmp-cmdline",
 	"saadparwaiz1/cmp_luasnip",
-	"hrsh7th/cmp-vsnip",
-	"hrsh7th/vim-vsnip",
 	"rafamadriz/friendly-snippets",
 
 	-- icons
