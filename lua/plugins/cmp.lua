@@ -69,12 +69,12 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 -- 	capabilities = capabilities,
 -- })
 
-local vue_plugin = {
-	name = "@vue/typescript-plugin",
-	location = vue_language_server_path,
-	languages = { "vue" },
-	configNamespace = "typescript",
-}
+-- local vue_plugin = {
+-- 	name = "@vue/typescript-plugin",
+-- 	location = vue_language_server_path,
+-- 	languages = { "vue" },
+-- 	configNamespace = "typescript",
+-- }
 
 -- new method
 vim.lsp.config("ts_ls", {
@@ -122,13 +122,6 @@ vim.lsp.config("vue_ls", {
 vim.lsp.config("vtsls", {
 	capabilities = capabilities,
 	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
-	settings = {
-		vtsls = {
-			tsserver = {
-				globalPlugins = { vue_plugin },
-			},
-		},
-	},
 })
 
 -- Emmet for HTML/JSX/Vue template shortcuts
