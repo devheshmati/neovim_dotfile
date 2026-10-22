@@ -69,6 +69,13 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 -- 	capabilities = capabilities,
 -- })
 
+local vue_plugin = {
+	name = "@vue/typescript-plugin",
+	location = vue_language_server_path,
+	languages = { "vue" },
+	configNamespace = "typescript",
+}
+
 -- new method
 vim.lsp.config("ts_ls", {
 	capabilities = capabilities,
@@ -108,6 +115,18 @@ vim.lsp.config("vue_ls", {
 	init_options = {
 		vue = {
 			hybridMode = false, -- set true if you also want ts_ls to handle the <script> block
+		},
+	},
+})
+
+vim.lsp.config("vtsls", {
+	capabilities = capabilities,
+	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+	settings = {
+		vtsls = {
+			tsserver = {
+				globalPlugins = { vue_plugin },
+			},
 		},
 	},
 })
@@ -154,12 +173,12 @@ vim.lsp.config("tailwindcss", {
 	},
 })
 
-vim.lsp.enable("vue_ls")
 vim.lsp.enable("emmet_language_server")
 vim.lsp.enable("html")
 vim.lsp.enable("cssls")
 vim.lsp.enable("tailwindcss") -- remove if not using Tailwind
 vim.lsp.enable("ts_ls")
+vim.lsp.enable("vue_ls")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("pyright")
 vim.lsp.enable("djls")
